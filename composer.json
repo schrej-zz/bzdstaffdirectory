@@ -1,0 +1,34 @@
+{
+  "name": "mrimann-bzdstaffdirectory",
+  "type": "typo3-cms-extension",
+  "version": "0.9.2",
+  "description": "An extension to show your staff or club-members in different output styles (single persons, lists).",
+  "keywords": ["staff", "address", "directory"],
+  "homepage": "https://github.com/mrimann/bzdstaffdirectory",
+  "support": {
+    "issues": "https://github.com/mrimann/bzdstaffdirectory/issues"
+  },
+  "authors": [
+    {
+      "name": "Mario Rimann",
+      "role": "Developer",
+      "homepage": "https://github.com/mrimann/"
+    }
+  ],
+  "license": ["GPL-2.0+"],
+  "replace": {
+    "seminars": "self.version",
+    "typo3-ter/seminars": "self.version"
+  },
+  "require": {
+    "php": ">=5.5.0",
+    "typo3/cms-core": ">=6.2.0,<8.0",
+    "oliverklee/oelib": ">=1.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.8.0"
+  },
+  "autoload": {
+    "classmap": ["Classes", "Tests"]
+  }
+}
