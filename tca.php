@@ -103,7 +103,7 @@ $TCA['tx_bzdstaffdirectory_persons'] = Array (
 							'table'=>'tx_bzdstaffdirectory_groups',
 							'pid' => '###CURRENT_PID###',
 						),
-						'script' => 'wizard_list.php'
+						'module' => array('name' => 'wizard_list')
 					)
 				)
 			)
@@ -220,7 +220,7 @@ $TCA['tx_bzdstaffdirectory_persons'] = Array (
 							'table'=>'tx_bzdstaffdirectory_locations',
 							'pid' => '###CURRENT_PID###',
 						),
-						'script' => 'wizard_list.php'
+						'module' => array('name' => 'wizard_list')
 					)
 				)
 			)
@@ -477,7 +477,7 @@ $TCA['tx_bzdstaffdirectory_groups'] = array(
 							'table'=>'tx_bzdstaffdirectory_persons',
 							'pid' => '###CURRENT_PID###',
 						),
-						'script' => 'wizard_list.php',
+						'module' => array('name' => 'wizard_list'),
 					)
 				)
 			)
@@ -507,7 +507,7 @@ $TCA['tx_bzdstaffdirectory_groups'] = array(
 							'table' => 'tx_bzdstaffdirectory_persons',
 							'pid' => '###CURRENT_PID###',
 						),
-						'script' => 'wizard_list.php',
+						'module' => array('name' => 'wizard_list'),
 					)
 				)
 			)

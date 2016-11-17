@@ -22,7 +22,7 @@
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(t3lib_extMgm::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
 
 /**
  * Class 'tx_bzdstaffdirectory_Model_Location' for the 'bzdstaffdirectory' extension.

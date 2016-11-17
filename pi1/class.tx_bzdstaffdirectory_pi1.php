@@ -22,7 +22,7 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(t3lib_extMgm::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
 
 /**
  * Plugin 'BZD Staff Directory' for the 'bzdstaffdirectory' extension.
@@ -55,7 +55,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		$this->uploadFolder = 'uploads/tx_bzdstaffdirectory/';
 
 		// Deinfe the path to the media folder
-		$this->mediaFolder = t3lib_extMgm::extPath('bzdstaffdirectory') . 'media/';
+		$this->mediaFolder = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('bzdstaffdirectory') . 'media/';
 
 		// load available syslanguages
 		$this->initLanguages();
@@ -246,7 +246,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 	 */
 	function getTeamArray($teamUID, $doTranslate = false) {
 		$whereClause = 'l18n_parent = 0'
-			.t3lib_pageSelect::enableFields('tx_bzdstaffdirectory_groups')
+			.\TYPO3\CMS\Frontend\Page\PageRepository::enableFields('tx_bzdstaffdirectory_groups')
 			.' AND uid ='.$teamUID;
 		$res_groups = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
@@ -748,7 +748,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		// build the array of file extensions that should get opened in a new window
 		$extensionArray = explode(',', $this->getConfValueString('fileExtensionsToOpenInNewWindow'));
 
-		$fileList = '<ul>';
+		$\TYPO3\CMS\Filelist\FileList = '<ul>';
 		foreach($files as $filename) {
 // FIXME: Define the path in a global place!
 			// get the extension of the current file
@@ -756,15 +756,15 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 
 			if (in_array($fileExtension, $extensionArray)) {
 				// this type of files need to be opened in a new window (target="_blank")
-				$fileList .= '<li><a href="uploads/tx_bzdstaffdirectory/'. $filename .'" target="_blank">' . $filename . '</a></li>';
+				$\TYPO3\CMS\Filelist\FileList .= '<li><a href="uploads/tx_bzdstaffdirectory/'. $filename .'" target="_blank">' . $filename . '</a></li>';
 			} else {
 				// all other files will be opened in the same window
-				$fileList .= '<li><a href="uploads/tx_bzdstaffdirectory/'. $filename .'" target="_top">' . $filename . '</a></li>';
+				$\TYPO3\CMS\Filelist\FileList .= '<li><a href="uploads/tx_bzdstaffdirectory/'. $filename .'" target="_top">' . $filename . '</a></li>';
 			}
 		}
-		$fileList .= '</ul>';
+		$\TYPO3\CMS\Filelist\FileList .= '</ul>';
 
-		return $fileList;
+		return $\TYPO3\CMS\Filelist\FileList;
 	}
 
 	/**
@@ -994,7 +994,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		$res_personDetails = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
 			'tx_bzdstaffdirectory_persons',	// FROM
-			'uid = ' . $uid .t3lib_pageSelect::enableFields('tx_bzdstaffdirectory_persons'),	//WHERE
+			'uid = ' . $uid .\TYPO3\CMS\Frontend\Page\PageRepository::enableFields('tx_bzdstaffdirectory_persons'),	//WHERE
 			'',	// GROUP BY
 			'',	// ORDER BY
 			'1'	//LIMIT
@@ -1583,7 +1583,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		$res_groupDetails = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
 			'tx_bzdstaffdirectory_groups',	// FROM
-			'uid = ' . $uid .t3lib_pageSelect::enableFields('tx_bzdstaffdirectory_groups'),	//WHERE
+			'uid = ' . $uid .\TYPO3\CMS\Frontend\Page\PageRepository::enableFields('tx_bzdstaffdirectory_groups'),	//WHERE
 			'',	// GROUP BY
 			'',	// ORDER BY
 			'1'	//LIMIT
@@ -1632,7 +1632,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		$resLocationDetails = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
 			'tx_bzdstaffdirectory_locations',	// FROM
-			'uid = ' . $uid .t3lib_pageSelect::enableFields('tx_bzdstaffdirectory_locations'),	//WHERE
+			'uid = ' . $uid .\TYPO3\CMS\Frontend\Page\PageRepository::enableFields('tx_bzdstaffdirectory_locations'),	//WHERE
 			'',	// GROUP BY
 			'',	// ORDER BY
 			'1'	//LIMIT

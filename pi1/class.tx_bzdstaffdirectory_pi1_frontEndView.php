@@ -22,7 +22,7 @@
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(t3lib_extMgm::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
 
 /**
  * Class 'frontEndView' for the 'bzdstaffdirectory' extension. Originally
@@ -52,9 +52,9 @@ abstract class tx_bzdstaffdirectory_pi1_frontEndView extends tx_oelib_templatehe
 	 * and set the CSS classes from TypoScript.
 	 *
 	 * @param array TypoScript configuration for the plugin
-	 * @param tslib_cObj the parent cObj content, needed for the flexforms
+	 * @param \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer the parent cObj content, needed for the flexforms
 	 */
-	public function __construct(array $configuration, tslib_cObj $cObj) {
+	public function __construct(array $configuration, \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer $cObj) {
 		$this->cObj = $cObj;
 		$this->init($configuration);
 		$this->pi_initPIflexForm();

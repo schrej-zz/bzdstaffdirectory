@@ -101,7 +101,7 @@ class ext_update {
 	 * @return boolean true if action is required
 	 */
 	private function checkIfOldExtensionKeyIsStillLoaded() {
-		return t3lib_extMgm::isLoaded('bzd_staff_directory');
+		return \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('bzd_staff_directory');
 	}
 
 	/**

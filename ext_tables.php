@@ -1,7 +1,7 @@
 <?php
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
-t3lib_extMgm::allowTableOnStandardPages("tx_bzdstaffdirectory_persons");
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages("tx_bzdstaffdirectory_persons");
 
 $TCA["tx_bzdstaffdirectory_persons"] = Array (
 	"ctrl" => Array (
@@ -23,8 +23,8 @@ $TCA["tx_bzdstaffdirectory_persons"] = Array (
 		"enablecolumns" => Array (
 			"disabled" => "hidden",
 		),
-		"dynamicConfigFile" => t3lib_extMgm::extPath($_EXTKEY)."tca.php",
-		"iconfile" => t3lib_extMgm::extRelPath($_EXTKEY)."icon_tx_bzdstaffdirectory_persons.gif",
+		"dynamicConfigFile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY)."tca.php",
+		"iconfile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY)."icon_tx_bzdstaffdirectory_persons.gif",
 	),
 	"feInterface" => Array (
 		"fe_admin_fieldList" => "hidden, last_name, first_name, image, usergroups, tasks",
@@ -32,7 +32,7 @@ $TCA["tx_bzdstaffdirectory_persons"] = Array (
 );
 
 
-t3lib_extMgm::allowTableOnStandardPages("tx_bzdstaffdirectory_groups");
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages("tx_bzdstaffdirectory_groups");
 
 $TCA["tx_bzdstaffdirectory_groups"] = Array (
 	"ctrl" => Array (
@@ -52,15 +52,15 @@ $TCA["tx_bzdstaffdirectory_groups"] = Array (
 		"enablecolumns" => Array (
 			"disabled" => "hidden",
 		),
-		"dynamicConfigFile" => t3lib_extMgm::extPath($_EXTKEY)."tca.php",
-		"iconfile" => t3lib_extMgm::extRelPath($_EXTKEY)."icon_tx_bzdstaffdirectory_groups.gif",
+		"dynamicConfigFile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY)."tca.php",
+		"iconfile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY)."icon_tx_bzdstaffdirectory_groups.gif",
 	),
 	"feInterface" => Array (
 		"fe_admin_fieldList" => "hidden, group_name",
 	)
 );
 
-t3lib_extMgm::allowTableOnStandardPages("tx_bzdstaffdirectory_locations");
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages("tx_bzdstaffdirectory_locations");
 
 $TCA["tx_bzdstaffdirectory_locations"] = Array (
 	'ctrl' => Array (
@@ -80,15 +80,15 @@ $TCA["tx_bzdstaffdirectory_locations"] = Array (
 		'enablecolumns' => array (
 			'disabled' => 'hidden',
 		),
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY).'icon_tx_bzdstaffdirectory_locations.gif',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'tca.php',
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'icon_tx_bzdstaffdirectory_locations.gif',
 	),
 	'feInterface' => array (
 		'fe_admin_fieldList' => 'hidden, title',
 	)
 );
 
-t3lib_extMgm::allowTableOnStandardPages("tx_bzdstaffdirectory_functions");
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages("tx_bzdstaffdirectory_functions");
 
 $TCA["tx_bzdstaffdirectory_functions"] = Array (
 	'ctrl' => Array (
@@ -108,8 +108,8 @@ $TCA["tx_bzdstaffdirectory_functions"] = Array (
 		'enablecolumns' => array (
 			'disabled' => 'hidden',
 		),
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY).'icon_tx_bzdstaffdirectory_functions.gif',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'tca.php',
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'icon_tx_bzdstaffdirectory_functions.gif',
 	),
 	'feInterface' => array (
 		'fe_admin_fieldList' => 'hidden, title',
@@ -117,21 +117,21 @@ $TCA["tx_bzdstaffdirectory_functions"] = Array (
 );
 
 
-t3lib_div::loadTCA('tt_content');
+
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_pi1']='layout, select_key, pages, recursive';
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_pi1']='pi_flexform';
 
 
 
 
-t3lib_extMgm::addPlugin(Array('LLL:EXT:bzdstaffdirectory/locallang_db.php:tt_content.list_type_pi1', $_EXTKEY.'_pi1'),'list_type');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(Array('LLL:EXT:bzdstaffdirectory/locallang_db.php:tt_content.list_type_pi1', $_EXTKEY.'_pi1'),'list_type');
 
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_pi1','FILE:EXT:bzdstaffdirectory/flexform_ds.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($_EXTKEY.'_pi1','FILE:EXT:bzdstaffdirectory/flexform_ds.xml');
 
-t3lib_extMgm::addStaticFile($_EXTKEY,"pi1/static/","BZD Staff Directory");
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY,"pi1/static/","BZD Staff Directory");
 
 
-if (TYPO3_MODE=="BE")	$TBE_MODULES_EXT["xMOD_db_new_content_el"]["addElClasses"]["tx_bzdstaffdirectory_pi1_wizicon"] = t3lib_extMgm::extPath($_EXTKEY).'pi1/class.tx_bzdstaffdirectory_pi1_wizicon.php';
+if (TYPO3_MODE=="BE")	$TBE_MODULES_EXT["xMOD_db_new_content_el"]["addElClasses"]["tx_bzdstaffdirectory_pi1_wizicon"] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'pi1/class.tx_bzdstaffdirectory_pi1_wizicon.php';
 
 $tempColumns = Array (
 	'tx_bzdstaffdirectory_bzd_contact_person' => Array (
@@ -157,14 +157,14 @@ $tempColumns = Array (
 						'table'=>'tx_bzdstaffdirectory_persons',
 						'pid' => '###CURRENT_PID###',
 					),
-					'script' => 'wizard_list.php',
+					'module' => array('name' => 'wizard_list'),
 				),
 			),
 		)
 	),
 );
 
-t3lib_div::loadTCA('pages');
-t3lib_extMgm::addTCAcolumns("pages",$tempColumns,1);
-t3lib_extMgm::addToAllTCAtypes("pages","tx_bzdstaffdirectory_bzd_contact_person;;;;1-1-1");
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns("pages",$tempColumns,1);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes("pages","tx_bzdstaffdirectory_bzd_contact_person;;;;1-1-1");
 ?>

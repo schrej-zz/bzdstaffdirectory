@@ -22,7 +22,7 @@
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(t3lib_extMgm::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
 
 /**
  * Class 'frontEndVcfView for the 'bzdstaffdirectory' extension.
@@ -54,7 +54,7 @@ class tx_bzdstaffdirectory_pi1_frontEndVcfView extends tx_bzdstaffdirectory_pi1_
 	 *
 	 * @param integer UID of the person to show
 	 * @param array TypoScript configuration for the plugin
-	 * @param tslib_cObj the parent cObj content, needed for the flexforms
+	 * @param \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer the parent cObj content, needed for the flexforms
 	 */
 	public function __construct($personUid, $configuration, $cObj) {
 		$this->cObj = $cObj;

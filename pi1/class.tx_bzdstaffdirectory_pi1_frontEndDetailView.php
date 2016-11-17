@@ -22,7 +22,7 @@
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(t3lib_extMgm::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
 
 /**
  * Class 'frontEndDetailView for the 'bzdstaffdirectory' extension.
@@ -54,7 +54,7 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 	 *
 	 * @param integer UID of the person to show
 	 * @param array TypoScript configuration for the plugin
-	 * @param tslib_cObj the parent cObj content, needed for the flexforms
+	 * @param \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer the parent cObj content, needed for the flexforms
 	 */
 	public function __construct($personUid, $configuration, $cObj) {
 		$this->cObj = $cObj;
@@ -359,15 +359,15 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 		}
 
 		if (count($files) > 1) {
-			$fileList = '';
+			$\TYPO3\CMS\Filelist\FileList = '';
 			foreach ($files as $currentFile) {
 				$link = $this->cObj->getTypoLink(
 					$currentFile,
 					'uploads/tx_bzdstaffdirectory/' . $currentFile
 				);
-				$fileList .= '<li>' . $link . '</li>';
+				$\TYPO3\CMS\Filelist\FileList .= '<li>' . $link . '</li>';
 			}
-			$result = '<ul>' . $fileList . '</ul>';
+			$result = '<ul>' . $\TYPO3\CMS\Filelist\FileList . '</ul>';
 			$this->setMarker('label_files', $this->translate('label_files_plural'));
 		} else {
 			$result = $this->cObj->getTypoLink(

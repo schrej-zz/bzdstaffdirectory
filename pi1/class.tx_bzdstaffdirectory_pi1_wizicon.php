@@ -34,7 +34,7 @@ class tx_bzdstaffdirectory_pi1_wizicon {
 		$LL = $this->includeLocalLang();
 
 		$wizardItems['plugins_tx_bzdstaffdirectory_pi1'] = array(
-			'icon'=>t3lib_extMgm::extRelPath('bzdstaffdirectory').'pi1/ce_wiz.gif',
+			'icon'=>\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('bzdstaffdirectory').'pi1/ce_wiz.gif',
 			'title'=>$LANG->getLLL('pi1_title',$LL),
 			'description'=>$LANG->getLLL('pi1_plus_wiz_description',$LL),
 			'params'=>'&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=bzdstaffdirectory_pi1'
@@ -49,7 +49,7 @@ class tx_bzdstaffdirectory_pi1_wizicon {
      * @return    array        The LOCAL_LANG array
      */
     function includeLocalLang()    {
-		$llFile = t3lib_extMgm::extPath('bzdstaffdirectory').'locallang.xml';
+		$llFile = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('bzdstaffdirectory').'locallang.xml';
 		$llXmlParser = new \TYPO3\CMS\Core\Localization\Parser\LocallangXmlParser();
 		$LOCAL_LANG = $llXmlParser->getParsedData($llFile, $GLOBALS['LANG']->lang);
 		return $LOCAL_LANG;
