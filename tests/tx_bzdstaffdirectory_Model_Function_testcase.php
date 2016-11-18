@@ -60,9 +60,9 @@ class tx_bzdstaffdirectory_Model_Function_testcase extends tx_phpunit_testcase {
 	 */
 	private function createFunction($functionUid) {
 		try {
-			$this->fixture = tx_oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Function')
+			$this->fixture = Tx_Oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Function')
 					->find($functionUid);
-		} catch (tx_oelib_Exception_NotFound $exception) {
+		} catch (Tx_Oelib_Exception_NotFound $exception) {
 			$this->fixture = null;
 		}
 	}

@@ -81,7 +81,7 @@ class tx_bzdstaffdirectory_Mapper_Person extends tx_bzdstaffdirectory_Mapper_Gen
 
 		try {
 			$model = $this->map->get($uid);
-		} catch (tx_oelib_Exception_NotFound $exception) {
+		} catch (Tx_Oelib_Exception_NotFound $exception) {
 			// The data already is in memory. So there's no need to read it from
 			// the DB again.
 			$model = $this->createAndFillModel($data);

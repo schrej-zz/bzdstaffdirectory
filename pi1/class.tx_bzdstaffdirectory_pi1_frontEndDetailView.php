@@ -23,6 +23,7 @@
 ***************************************************************/
 
 
+require_once(__DIR__ . '/class.tx_bzdstaffdirectory_pi1_frontEndView.php');
 
 /**
  * Class 'frontEndDetailView for the 'bzdstaffdirectory' extension.
@@ -99,11 +100,11 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 	 */
 	private function createPerson($personUid) {
 		try {
-			$mapper = tx_oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Person');
+			$mapper = Tx_Oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Person');
 			if ($mapper->existsModel($personUid)) {
 				$this->person = $mapper->find($personUid);
 			}
-		} catch (tx_oelib_Exception_NotFound $exception) {
+		} catch (Tx_Oelib_Exception_NotFound $exception) {
 			$this->person = null;
 		}
 
@@ -120,6 +121,8 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 	 *                event found
 	 */
 	public function render() {
+        $result = '';
+        
 		// Set's the name and title markers
 		$this->setMarker('first_name', $this->person->getFirstName());
 		$this->setMarker('last_name', $this->person->getLastName());
@@ -359,15 +362,15 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 		}
 
 		if (count($files) > 1) {
-			$\TYPO3\CMS\Filelist\FileList = '';
+			$fileList = '';
 			foreach ($files as $currentFile) {
 				$link = $this->cObj->getTypoLink(
 					$currentFile,
 					'uploads/tx_bzdstaffdirectory/' . $currentFile
 				);
-				$\TYPO3\CMS\Filelist\FileList .= '<li>' . $link . '</li>';
+				$fileList .= '<li>' . $link . '</li>';
 			}
-			$result = '<ul>' . $\TYPO3\CMS\Filelist\FileList . '</ul>';
+			$result = '<ul>' . $fileList . '</ul>';
 			$this->setMarker('label_files', $this->translate('label_files_plural'));
 		} else {
 			$result = $this->cObj->getTypoLink(
@@ -397,6 +400,8 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 		}
 
 		if ($teams->count() > 1) {
+            $memberOfList = '';
+
 			// we have more than one group and need to build a list
 			while ($currentTeam = $teams->current()) {
 
@@ -449,6 +454,8 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 		}
 
 		if ($locations->count() > 1) {
+            $memberOfList = '';
+
 			// we have more than one location and need to build a list
 			while ($currentLocation = $locations->current()) {
 

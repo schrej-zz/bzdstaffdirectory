@@ -64,9 +64,9 @@ class tx_bzdstaffdirectory_Model_Location_testcase extends tx_phpunit_testcase {
 	 */
 	private function createLocation($locationUid) {
 		try {
-			$this->fixture = tx_oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Location')
+			$this->fixture = Tx_Oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Location')
 					->find($locationUid);
-		} catch (tx_oelib_Exception_NotFound $exception) {
+		} catch (Tx_Oelib_Exception_NotFound $exception) {
 			$this->fixture = null;
 		}
 	}

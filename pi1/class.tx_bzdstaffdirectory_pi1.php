@@ -100,8 +100,10 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 
 		if (isset($this->piVars['vcf'])) {
 			$detailViewClassName = 'tx_bzdstaffdirectory_pi1_frontEndVcfView';
+			require_once(__DIR__ . '/class.tx_bzdstaffdirectory_pi1_frontEndVcfView.php');
 		} else {
 			$detailViewClassName = 'tx_bzdstaffdirectory_pi1_frontEndDetailView';
+			require_once(__DIR__ . '/class.tx_bzdstaffdirectory_pi1_frontEndDetailView.php');
 		}
 
 		$detailView = new $detailViewClassName(
@@ -1458,7 +1460,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 
 		if ($GLOBALS['TYPO3_DB']->sql_num_rows($dbResult) > 0)	{
 			$relation = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($dbResult);
-			$function = tx_oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Function')
+			$function = Tx_Oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Function')
 					->find($relation['uid_foreign']);
 		}
 

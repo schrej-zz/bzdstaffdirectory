@@ -87,11 +87,11 @@ class tx_bzdstaffdirectory_pi1_frontEndVcfView extends tx_bzdstaffdirectory_pi1_
 	 */
 	private function createPerson($personUid) {
 		try {
-			$mapper = tx_oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Person');
+			$mapper = Tx_Oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Person');
 			if ($mapper->existsModel($personUid)) {
 				$this->person = $mapper->find($personUid);
 			}
-		} catch (tx_oelib_Exception_NotFound $exception) {
+		} catch (Tx_Oelib_Exception_NotFound $exception) {
 			$this->person = null;
 		}
 	}

@@ -34,10 +34,10 @@
  *
  * @author Mario Rimann <typo3-coding@rimann.org>
  */
-class tx_bzdstaffdirectory_Model_Generic extends tx_oelib_Model {
+class tx_bzdstaffdirectory_Model_Generic extends Tx_Oelib_Model {
 	/**
 	 * Sets a value within this object. Basically needed to make the protected
-	 * function of tx_oelib_Model accessible from the outside.
+	 * function of Tx_Oelib_Model accessible from the outside.
 	 *
 	 * @param the key (e.g. database field name)
 	 * @param the value to be stored

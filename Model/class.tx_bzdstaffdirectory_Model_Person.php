@@ -132,7 +132,7 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 
 		if ($GLOBALS['TYPO3_DB']->sql_num_rows($dbResult) > 0)	{
 			$relation = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($dbResult);
-			$functionMapper = tx_oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Function');
+			$functionMapper = Tx_Oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Function');
 			$function = $functionMapper->find($relation['uid_foreign']);
 
 			// try to localize if we're not in the default language
@@ -340,10 +340,10 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 	/**
 	 * Returns a list of teams on which this person is member of.
 	 *
-	 * @return tx_oelib_List a list of team objects
+	 * @return Tx_Oelib_List a list of team objects
 	 */
 	public function getTeams() {
-		$teams = new tx_oelib_List();
+		$teams = new Tx_Oelib_List();
 
 		$dbResult = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
@@ -359,7 +359,7 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 
 		if ($GLOBALS['TYPO3_DB']->sql_num_rows($dbResult) > 0)	{
 			while($member = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($dbResult))	{
-				$teamMapper = tx_oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Team');
+				$teamMapper = Tx_Oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Team');
 				$currentTeam = $teamMapper->find($member['uid_foreign']);
 
 				// try to localize if we're not in the default language
@@ -387,10 +387,10 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 	/**
 	 * Returns a list of locations to which this person is assigned.
 	 *
-	 * @return tx_oelib_List a list of location objects
+	 * @return Tx_Oelib_List a list of location objects
 	 */
 	public function getLocations() {
-		$locations = new tx_oelib_List();
+		$locations = new Tx_Oelib_List();
 
 		$dbResult = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
@@ -406,7 +406,7 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 
 		if ($GLOBALS['TYPO3_DB']->sql_num_rows($dbResult) > 0)	{
 			while($relation = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($dbResult))	{
-				$locationMapper = tx_oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Location');
+				$locationMapper = Tx_Oelib_MapperRegistry::get('tx_bzdstaffdirectory_Mapper_Location');
 				$currentLocation = $locationMapper->find($relation['uid_foreign']);
 
 				// try to localize if we're not in the default language

@@ -35,7 +35,7 @@
  *
  * @author Mario Rimann <typo3-coding@rimann.org>
  */
-class tx_bzdstaffdirectory_Mapper_Generic extends tx_oelib_DataMapper {
+class tx_bzdstaffdirectory_Mapper_Generic extends Tx_Oelib_DataMapper {
 
 	/**
 	 * List of fields to be overlayed, needs to be set in the specific
@@ -54,7 +54,7 @@ class tx_bzdstaffdirectory_Mapper_Generic extends tx_oelib_DataMapper {
 	 */
 	public function overlayRecord(tx_bzdstaffdirectory_Model_Generic $person, $sysLanguageUid) {
 		try {
-			$overlayRecord = tx_oelib_db::selectSingle(
+			$overlayRecord = Tx_Oelib_db::selectSingle(
 				'*',
 				$this->tableName,
 				'sys_language_uid = ' . $sysLanguageUid . ' AND l18n_parent=' . $person->getUid() . ' AND deleted=0 AND hidden=0'
