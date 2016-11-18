@@ -30,7 +30,21 @@
  * @author	Mario Rimann <typo3-coding@rimann.org>
  */
 
+// I'm too lazy to change the stuff to make autoloading work
 
+$extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('bzdstaffdirectory');
+
+require_once $extPath . 'Mapper/class.tx_bzdstaffdirectory_Mapper_Generic.php';
+require_once $extPath . 'Mapper/class.tx_bzdstaffdirectory_Mapper_Function.php';
+require_once $extPath . 'Mapper/class.tx_bzdstaffdirectory_Mapper_Location.php';
+require_once $extPath . 'Mapper/class.tx_bzdstaffdirectory_Mapper_Person.php';
+require_once $extPath . 'Mapper/class.tx_bzdstaffdirectory_Mapper_Team.php';
+
+require_once $extPath . 'Model/class.tx_bzdstaffdirectory_Model_Generic.php';
+require_once $extPath . 'Model/class.tx_bzdstaffdirectory_Model_Function.php';
+require_once $extPath . 'Model/class.tx_bzdstaffdirectory_Model_Location.php';
+require_once $extPath . 'Model/class.tx_bzdstaffdirectory_Model_Person.php';
+require_once $extPath . 'Model/class.tx_bzdstaffdirectory_Model_Team.php';
 
 class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 	var $prefixId = 'tx_bzdstaffdirectory_pi1';		// Same as class name
