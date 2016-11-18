@@ -22,7 +22,7 @@
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+
 
 /**
  * Testcase for the 'frontEndVcfView' class in the 'bzdstaffdirectory' extension.
@@ -39,7 +39,7 @@ class tx_bzdstaffdirectory_frontEndVcfView_testcase extends tx_phpunit_testcase 
 	 */
 	private $fixture;
 	/**
-	 * @var tx_oelib_testingFramework
+	 * @var Tx_Oelib_TestingFramework
 	 */
 	private $testingFramework;
 
@@ -50,7 +50,7 @@ class tx_bzdstaffdirectory_frontEndVcfView_testcase extends tx_phpunit_testcase 
 
 
 	public function setUp() {
-		$this->testingFramework = new tx_oelib_testingFramework('tx_bzdstaffdirectory');
+		$this->testingFramework = new Tx_Oelib_TestingFramework('tx_bzdstaffdirectory');
 		$this->testingFramework->createFakeFrontEnd();
 
 		$this->personUid = $this->testingFramework->createRecord(

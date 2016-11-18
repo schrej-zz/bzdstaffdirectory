@@ -22,14 +22,17 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+
 
 /**
  * Plugin 'BZD Staff Directory' for the 'bzdstaffdirectory' extension.
  *
  * @author	Mario Rimann <typo3-coding@rimann.org>
  */
-class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
+
+
+
+class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 	var $prefixId = 'tx_bzdstaffdirectory_pi1';		// Same as class name
 	var $scriptRelPath = 'pi1/class.tx_bzdstaffdirectory_pi1.php';	// Path to this script relative to the extension dir.
 	var $extKey = 'bzdstaffdirectory';	// The extension key.
@@ -135,6 +138,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 	 */
 	function show_teamlist()	{
 		$content = '';
+		$errorMessage = '';
 
 		// Define the team UID(s) that are selected in the flexform. This is a comma separated list if more than one UID.
 		$this->teamUidList = $this->getConfValueString('usergroup','s_teamlist');
@@ -246,7 +250,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 	 */
 	function getTeamArray($teamUID, $doTranslate = false) {
 		$whereClause = 'l18n_parent = 0'
-			.\TYPO3\CMS\Frontend\Page\PageRepository::enableFields('tx_bzdstaffdirectory_groups')
+			.Tx_Oelib_Db::enableFields('tx_bzdstaffdirectory_groups')
 			.' AND uid ='.$teamUID;
 		$res_groups = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
@@ -653,6 +657,8 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 	 * @return	string		the html code
 	 */
 	function showPersonBox($person) {
+		$content = '';
+		
 		// Define the detail-Page (either from the TS setup, or from the FlexForm-Setting).
 		$this->detailPage = $this->getConfValueInteger('detailPage', 's_contactbox');
 
@@ -748,7 +754,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		// build the array of file extensions that should get opened in a new window
 		$extensionArray = explode(',', $this->getConfValueString('fileExtensionsToOpenInNewWindow'));
 
-		$\TYPO3\CMS\Filelist\FileList = '<ul>';
+		$fileList = '<ul>';
 		foreach($files as $filename) {
 // FIXME: Define the path in a global place!
 			// get the extension of the current file
@@ -756,15 +762,15 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 
 			if (in_array($fileExtension, $extensionArray)) {
 				// this type of files need to be opened in a new window (target="_blank")
-				$\TYPO3\CMS\Filelist\FileList .= '<li><a href="uploads/tx_bzdstaffdirectory/'. $filename .'" target="_blank">' . $filename . '</a></li>';
+				$fileList .= '<li><a href="uploads/tx_bzdstaffdirectory/'. $filename .'" target="_blank">' . $filename . '</a></li>';
 			} else {
 				// all other files will be opened in the same window
-				$\TYPO3\CMS\Filelist\FileList .= '<li><a href="uploads/tx_bzdstaffdirectory/'. $filename .'" target="_top">' . $filename . '</a></li>';
+				$fileList .= '<li><a href="uploads/tx_bzdstaffdirectory/'. $filename .'" target="_top">' . $filename . '</a></li>';
 			}
 		}
-		$\TYPO3\CMS\Filelist\FileList .= '</ul>';
+		$fileList .= '</ul>';
 
-		return $\TYPO3\CMS\Filelist\FileList;
+		return $fileList;
 	}
 
 	/**
@@ -994,7 +1000,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		$res_personDetails = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
 			'tx_bzdstaffdirectory_persons',	// FROM
-			'uid = ' . $uid .\TYPO3\CMS\Frontend\Page\PageRepository::enableFields('tx_bzdstaffdirectory_persons'),	//WHERE
+			'uid = ' . $uid .Tx_Oelib_Db::enableFields('tx_bzdstaffdirectory_persons'),	//WHERE
 			'',	// GROUP BY
 			'',	// ORDER BY
 			'1'	//LIMIT
@@ -1583,7 +1589,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		$res_groupDetails = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
 			'tx_bzdstaffdirectory_groups',	// FROM
-			'uid = ' . $uid .\TYPO3\CMS\Frontend\Page\PageRepository::enableFields('tx_bzdstaffdirectory_groups'),	//WHERE
+			'uid = ' . $uid .Tx_Oelib_Db::enableFields('tx_bzdstaffdirectory_groups'),	//WHERE
 			'',	// GROUP BY
 			'',	// ORDER BY
 			'1'	//LIMIT
@@ -1632,7 +1638,7 @@ class tx_bzdstaffdirectory_pi1 extends tx_oelib_templatehelper {
 		$resLocationDetails = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',	// SELECT
 			'tx_bzdstaffdirectory_locations',	// FROM
-			'uid = ' . $uid .\TYPO3\CMS\Frontend\Page\PageRepository::enableFields('tx_bzdstaffdirectory_locations'),	//WHERE
+			'uid = ' . $uid .Tx_Oelib_Db::enableFields('tx_bzdstaffdirectory_locations'),	//WHERE
 			'',	// GROUP BY
 			'',	// ORDER BY
 			'1'	//LIMIT

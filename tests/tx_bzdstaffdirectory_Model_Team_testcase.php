@@ -22,7 +22,7 @@
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+
 
 /**
  * Testcase for the team model in the 'bzdstaffdirectory' extension.
@@ -36,7 +36,7 @@ class tx_bzdstaffdirectory_Model_Team_testcase extends tx_phpunit_testcase {
 	private $uid;
 
 	protected function setUp() {
-		$this->testingFramework = new tx_oelib_testingFramework('tx_bzdstaffdirectory');
+		$this->testingFramework = new Tx_Oelib_TestingFramework('tx_bzdstaffdirectory');
 
 		$this->uid = $this->testingFramework->createRecord(
 			'tx_bzdstaffdirectory_groups',

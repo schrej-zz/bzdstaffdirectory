@@ -22,7 +22,7 @@
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib') . 'class.tx_oelib_Autoloader.php');
+
 
 /**
  * Class 'frontEndView' for the 'bzdstaffdirectory' extension. Originally
@@ -35,7 +35,7 @@ require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('oelib'
  *
  * @author Niels Pardon <mail@niels-pardon.de>
  */
-abstract class tx_bzdstaffdirectory_pi1_frontEndView extends tx_oelib_templatehelper {
+abstract class tx_bzdstaffdirectory_pi1_frontEndView extends Tx_Oelib_Templatehelper {
 	/**
 	 * @var string same as plugin name
 	 */
