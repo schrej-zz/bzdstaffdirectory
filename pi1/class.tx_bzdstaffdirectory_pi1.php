@@ -411,9 +411,9 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 
 			// Combine anything and return it
 			$content .= $currentTeamHeader
-						.$this->createListHeader()
+						.$this->getSubpart('LIST_HEADER')
 						.$currentTeamHTML
-						.$this->createListFooter();
+						.$this->getSubpart('LIST_FOOTER');
 		}
 
 		return $content;
@@ -455,7 +455,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$this->setLabelFields();
 
 		// create and display the list header
-		$content = $this->createListHeader();
+		$content = $this->getSubpart('LIST_HEADER');
 
 		// output the team leaders
 		foreach($this->teamLeadersUIDArray as $currentLeaderUID) {
@@ -487,7 +487,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		}
 
 		// add the table footer
-		$content .= $this->createListFooter();
+		$content .= $this->getSubpart('LIST_FOOTER');
 
 		return $content;
 	}
@@ -1816,35 +1816,6 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		} else {
 			$result = $person[$key];
 		}
-
-		return $result;
-	}
-
-	/**
-	 * Returns the list view header: Start of table, header row, start of table body.
-	 * Columns listed in $this->subpartsToHide are hidden (ie. not displayed).
-	 *
-	 * @return	string		HTML output, the table header
-	 *
-	 * @access	protected
-	 */
-	function createListHeader() {
-		$result = $this->getSubpart('LIST_HEADER');
-
-		return $result;
-	}
-
-	/**
-	 * Returns the list view footer: end of table body, end of table.
-	 *
-	 * Columns listed in $this->subpartsToHide are hidden (ie. not displayed).
-	 *
-	 * @return	string		HTML output, the table header
-	 *
-	 * @access	protected
-	 */
-	function createListFooter() {
-		$result = $this->getSubpart('LIST_FOOTER');
 
 		return $result;
 	}
