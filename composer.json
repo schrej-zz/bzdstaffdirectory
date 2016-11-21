@@ -1,7 +1,7 @@
 {
   "name": "mrimann-bzdstaffdirectory",
   "type": "typo3-cms-extension",
-  "version": "0.9.2",
+  "version": "0.10.0-dev",
   "description": "An extension to show your staff or club-members in different output styles (single persons, lists).",
   "keywords": ["staff", "address", "directory"],
   "homepage": "https://github.com/mrimann/bzdstaffdirectory",
