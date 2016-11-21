@@ -411,10 +411,15 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 
 			// Combine anything and return it
 			$content .= $currentTeamHeader
-						.$this->getSubpart('LIST_HEADER')
+						.$this->getSubpart('GROUPED_LIST_HEADER')
 						.$currentTeamHTML
-						.$this->getSubpart('LIST_FOOTER');
+						.$this->getSubpart('GROUPED_LIST_FOOTER');
 		}
+
+        $content =
+            $this->getSubpart('GROUPED_LIST_ALL_HEADER')
+            .$content
+            .$this->getSubpart('GROUPED_LIST_ALL_FOOTER');
 
 		return $content;
 	}
