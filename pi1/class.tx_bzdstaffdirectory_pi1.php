@@ -181,7 +181,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 				// will be shown when all persons are shown and the team selection is ignored!
 				$this->teamLeadersUIDArray = array();
 			} else {
-				if ($this->teamUidList != '') {
+				if ($this->teamUidList) {
 					// Select the team leaders
 					$this->teamLeadersUIDArray = $this->getTeamLeadersFromMM(
 						$this->teamUidList,
@@ -361,7 +361,10 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		}
 
 		foreach (explode(',', $selectedGroups) as $currentGroup) {
-			$teams[] = $this->getTeamArray($currentGroup, true);
+			$team = $this->getTeamArray($currentGroup, true);
+			if ($team) {
+				$teams[] = $team;
+			}
 		}
 
 		$content .= $this->getJumpMenu($teams);
@@ -805,6 +808,8 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$result = '';
 		$memberOf = $this->getMemberOfGroups($uid);
 		if (count($memberOf) > 1) {
+			$memberOfList = '';
+
 			// we have more than one group and need to build a list
 			foreach ($memberOf as $actualGroupUID) {
 				$actualGroup = $this->getTeamDetails($actualGroupUID, true);
@@ -861,6 +866,8 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$result = '';
 		$memberOf = $this->getLocationsForPerson($uid);
 		if (count($memberOf) > 1) {
+			$memberOfList = '';
+
 			// we have more than one location and need to build a list
 			foreach ($memberOf as $currentLocationUid) {
 				$currentLocation = $this->getLocationDetails($currentLocationUid, true);
