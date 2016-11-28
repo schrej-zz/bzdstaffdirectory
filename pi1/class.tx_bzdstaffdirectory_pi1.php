@@ -1073,7 +1073,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$res_groupMembers = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'uid',	// SELECT
 			'tx_bzdstaffdirectory_persons',	// FROM
-			'pid IN(' . $pidList . ') AND l18n_parent = 0',	//WHERE
+			'pid IN(' . $pidList . ') AND l18n_parent = 0' .Tx_Oelib_Db::enableFields('tx_bzdstaffdirectory_persons'),	//WHERE
 			'',	// GROUP BY
 			$sortOrder,	// ORDER BY
 			''	//LIMIT
@@ -1141,7 +1141,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 						'uid',	// SELECT
 						'tx_bzdstaffdirectory_persons',	// FROM
 						'uid IN(' . $groupLeadersUIDList . ') AND l18n_parent = 0'
-							.$additionalWhereClause,	//WHERE
+							.$additionalWhereClause .Tx_Oelib_Db::enableFields('tx_bzdstaffdirectory_persons'),	//WHERE
 						'',	// GROUP BY
 						$sortOrder,	// ORDER BY
 						''	//LIMIT
@@ -1229,7 +1229,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 				'uid',	// SELECT
 				'tx_bzdstaffdirectory_persons',	// FROM
 				'uid IN(' . $groupMembersUIDList . ') AND l18n_parent = 0'
-					.$additionalWhereClause,	//WHERE
+					.$additionalWhereClause .Tx_Oelib_Db::enableFields('tx_bzdstaffdirectory_persons'),	//WHERE
 				'',	// GROUP BY
 				$sortOrder,	// ORDER BY
 				''	//LIMIT
