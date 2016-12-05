@@ -108,6 +108,11 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 	 * @return string HTML source for the detail view
 	 */
 	function renderDetailView() {
+		if (!intval($this->piVars['showUid'])) {
+			return '';
+		}
+
+
 		if (intval($this->piVars['backPid'])) {
 			$this->conf['DETAIL.']['backPid'] = intval($this->piVars['backPid']);
 		}
