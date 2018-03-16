@@ -24,7 +24,7 @@ $TCA["tx_bzdstaffdirectory_persons"] = Array (
 			"disabled" => "hidden",
 		),
 		"dynamicConfigFile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY)."tca.php",
-		"iconfile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY)."icon_tx_bzdstaffdirectory_persons.gif",
+        'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_persons.gif',
 	),
 	"feInterface" => Array (
 		"fe_admin_fieldList" => "hidden, last_name, first_name, image, usergroups, tasks",
@@ -53,7 +53,7 @@ $TCA["tx_bzdstaffdirectory_groups"] = Array (
 			"disabled" => "hidden",
 		),
 		"dynamicConfigFile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY)."tca.php",
-		"iconfile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY)."icon_tx_bzdstaffdirectory_groups.gif",
+        'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_groups.gif',
 	),
 	"feInterface" => Array (
 		"fe_admin_fieldList" => "hidden, group_name",
@@ -81,7 +81,7 @@ $TCA["tx_bzdstaffdirectory_locations"] = Array (
 			'disabled' => 'hidden',
 		),
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'tca.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'icon_tx_bzdstaffdirectory_locations.gif',
+        'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_locations.gif',
 	),
 	'feInterface' => array (
 		'fe_admin_fieldList' => 'hidden, title',
@@ -109,7 +109,7 @@ $TCA["tx_bzdstaffdirectory_functions"] = Array (
 			'disabled' => 'hidden',
 		),
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'tca.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'icon_tx_bzdstaffdirectory_functions.gif',
+        'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_functions.gif',
 	),
 	'feInterface' => array (
 		'fe_admin_fieldList' => 'hidden, title',

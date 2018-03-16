@@ -86,27 +86,13 @@ $TCA['tx_bzdstaffdirectory_persons'] = Array (
 			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.usergroups',
 			'config' => array(
 				'type' => 'select',
-                'renderType' => 'selectSingle',
+                'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_bzdstaffdirectory_groups',
 				'foreign_table_where' => 'AND tx_bzdstaffdirectory_groups.l18n_parent = 0 ORDER BY tx_bzdstaffdirectory_groups.uid',
 				'size' => 4,
 				'minitems' => 0,
 				'maxitems' => 99,
 				'MM' => 'tx_bzdstaffdirectory_persons_usergroups_mm',
-				'wizards' => array(
-					'_PADDING' => 2,
-					'_VERTICAL' => 1,
-					'list' => array(
-						'type' => 'script',
-						'title' => 'List',
-						'icon' => 'list.gif',
-						'params' => array(
-							'table'=>'tx_bzdstaffdirectory_groups',
-							'pid' => '###CURRENT_PID###',
-						),
-						'module' => array('name' => 'wizard_list')
-					)
-				)
 			)
 		),
 		'gender' => array(
@@ -206,27 +192,13 @@ $TCA['tx_bzdstaffdirectory_persons'] = Array (
 			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.location',
 			'config' => array(
 				'type' => 'select',
-                'renderType' => 'selectSingle',
+                'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_bzdstaffdirectory_locations',
 				'foreign_table_where' => 'AND tx_bzdstaffdirectory_locations.l18n_parent = 0 ORDER BY tx_bzdstaffdirectory_locations.uid',
 				'size' => 4,
 				'minitems' => 0,
 				'maxitems' => 99,
 				'MM' => 'tx_bzdstaffdirectory_persons_locations_mm',
-				'wizards' => array(
-					'_PADDING' => 2,
-					'_VERTICAL' => 1,
-					'list' => array(
-						'type' => 'script',
-						'title' => 'List',
-						'icon' => 'list.gif',
-						'params' => array(
-							'table'=>'tx_bzdstaffdirectory_locations',
-							'pid' => '###CURRENT_PID###',
-						),
-						'module' => array('name' => 'wizard_list')
-					)
-				)
 			)
 		),
 		'room' => array(
