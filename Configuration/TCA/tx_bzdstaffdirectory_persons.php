@@ -33,7 +33,6 @@ $TCA['tx_bzdstaffdirectory_persons'] = Array (
 	'interface' => array(
 		'showRecordFieldList' => 'hidden,last_name,first_name,image,usergroups,tasks'
 	),
-	'feInterface' => $TCA['tx_bzdstaffdirectory_persons']['feInterface'],
 	'columns' => array(
 		'hidden' => array(
 			'l10n_mode' => $hideNewLocalizations,
