@@ -21,8 +21,7 @@ $TCA["tx_bzdstaffdirectory_persons"] = Array (
 		"enablecolumns" => Array (
 			"disabled" => "hidden",
 		),
-		"dynamicConfigFile" => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY)."tca.php",
-        'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_persons.gif',
+		'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_persons.gif',
 	),
 	"feInterface" => Array (
 		"fe_admin_fieldList" => "hidden, last_name, first_name, image, usergroups, tasks",
