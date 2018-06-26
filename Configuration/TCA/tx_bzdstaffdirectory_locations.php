@@ -19,8 +19,7 @@ $TCA["tx_bzdstaffdirectory_locations"] = Array (
 		'enablecolumns' => array (
 			'disabled' => 'hidden',
 		),
-		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'tca.php',
-        'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_locations.gif',
+		'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_locations.gif',
 	),
 	'feInterface' => array (
 		'fe_admin_fieldList' => 'hidden, title',
