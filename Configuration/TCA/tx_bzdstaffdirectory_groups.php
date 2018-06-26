@@ -31,7 +31,6 @@ $TCA['tx_bzdstaffdirectory_groups'] = array(
 	'interface' => array(
 		'showRecordFieldList' => 'hidden,group_name'
 	),
-	'feInterface' => $TCA['tx_bzdstaffdirectory_groups']['feInterface'],
 	'columns' => array(
 		'hidden' => array(
 			'l10n_mode' => $hideNewLocalizations,
