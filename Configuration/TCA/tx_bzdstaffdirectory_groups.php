@@ -23,7 +23,7 @@ $TCA["tx_bzdstaffdirectory_groups"] = Array (
 	),
 );
 
-*
+/*
  * This is the default Table Configuration Array for the teams table.
  */
 $TCA['tx_bzdstaffdirectory_groups'] = array(
