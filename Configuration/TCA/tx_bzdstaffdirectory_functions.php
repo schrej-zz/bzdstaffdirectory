@@ -23,7 +23,7 @@ $TCA["tx_bzdstaffdirectory_functions"] = Array (
 	),
 );
 
-*
+/*
  * This is the default Table Configuration Array for the functions table.
  */
 $TCA['tx_bzdstaffdirectory_functions'] = array(
