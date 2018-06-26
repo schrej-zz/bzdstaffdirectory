@@ -23,7 +23,7 @@ $TCA["tx_bzdstaffdirectory_locations"] = Array (
 	),
 );
 
-*
+/*
  * This is the default Table Configuration Array for the locations table.
  */
 $TCA['tx_bzdstaffdirectory_locations'] = array(
