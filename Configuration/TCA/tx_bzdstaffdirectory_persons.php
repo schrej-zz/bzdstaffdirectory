@@ -23,8 +23,5 @@ $TCA["tx_bzdstaffdirectory_persons"] = Array (
 		),
 		'iconfile' => 'EXT:bzdstaffdirectory/icon_tx_bzdstaffdirectory_persons.gif',
 	),
-	"feInterface" => Array (
-		"fe_admin_fieldList" => "hidden, last_name, first_name, image, usergroups, tasks",
-	)
 );
 ?>
