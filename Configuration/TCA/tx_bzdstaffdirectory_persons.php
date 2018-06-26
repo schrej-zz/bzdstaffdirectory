@@ -409,5 +409,5 @@ foreach ($requiredFields as $requiredField) {
 			$TCA['tx_bzdstaffdirectory_persons']['columns'][$requiredField]['config']['eval'] = 'required';
 		}
 	}
-
+}
 ?>
