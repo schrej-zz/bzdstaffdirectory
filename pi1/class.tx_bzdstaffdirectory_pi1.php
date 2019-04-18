@@ -132,7 +132,9 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		);
 		$result = $detailView->render();
 
-		$detailView->__destruct();
+//		Destruct not necessary anymore in PHP 7.x and up JS 2019.02.10
+//		$detailView->__destruct();
+
 		unset($detailView);
 
 		if (isset($this->piVars['vcf'])) {
@@ -962,10 +964,10 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 			$imageconf['JSwindow'] = 1;
 			$imageconf['wrap'] = '<a href="javascript: close();"> | </a>';
 
-			$result = $this->cObj->imageLinkWrap($this->cObj->IMAGE($lconf['image.']),$popUpImageArray[3],$imageconf);
+			$result = $this->cObj->imageLinkWrap($this->cObj->cObjGetSingle('IMAGE',$lconf['image.']),$popUpImageArray[3],$imageconf);
 
 		} else	{
-			$result = $this->cObj->IMAGE($lconf['image.']);
+			$result = $this->cObj->cObjGetSingle('IMAGE', $lconf['image.']);
 		}
 
 		return $result;
@@ -1577,7 +1579,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$emailconf["image."]["file."]["10."]["nicetext"] = 1;
 		$emailconf["image."]["file."]["XY"] ='[10.w]+1, [10.h]+4';
 
-		$result['display'] = $this->cObj->IMAGE($emailconf['image.']);
+		$result['display'] = $this->cObj->cObjGetSingle('IMAGE',$emailconf['image.']);
 		if ($includeEncryptedLink) {
 			$encrypted = $this->email_jsencrypted($email);
 			$result['begin'] = $encrypted['begin'];
