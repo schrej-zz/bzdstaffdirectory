@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-04-08T08:21:17Z" product-name="bzdstaffdirectory">
+		<header/>
+		<body>
+			<trans-unit id="pages.tx_bzdstaffdirectory_bzd_contact_person" xml:space="preserve">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_group" xml:space="preserve">
+				<source>Which group should be shown?</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_liststyle" xml:space="preserve">
+				<source>What to show?</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_liststyle_grouped" xml:space="preserve">
+				<source>grouped by team</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_liststyle_images" xml:space="preserve">
+				<source>just images</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_liststyle_mixed" xml:space="preserve">
+				<source>Text and images (default)</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_liststyle_names" xml:space="preserve">
+				<source>just names</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_listtype" xml:space="preserve">
+				<source>What to show?</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_listtype_box" xml:space="preserve">
+				<source>BOX - Contact person</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_listtype_detail" xml:space="preserve">
+				<source>DETAIL - Detailed information</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_listtype_teamlist" xml:space="preserve">
+				<source>TEAMLIST - List of a team</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_source" xml:space="preserve">
+				<source>Where to select the person(s) to show?</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_source_frompage" xml:space="preserve">
+				<source>from page (default)</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_source_fromplugin" xml:space="preserve">
+				<source>from this plugin</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_source_fromteamleaders" xml:space="preserve">
+				<source>from teams</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_spamprotectionmode" xml:space="preserve">
+				<source>How to protect e-mail addresses from being stolen by spammers?</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_spamprotectionmode_asimage" xml:space="preserve">
+				<source>Render it as an image (not linked)</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_spamprotectionmode_asimagejsencrypted" xml:space="preserve">
+				<source>Render it as an image (with encrypted link)</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_spamprotectionmode_jsencrypted" xml:space="preserve">
+				<source>Encrypt it with JavaScript function</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_spamprotectionmode_plain" xml:space="preserve">
+				<source>No protection, plain text.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.list_type_pi1" xml:space="preserve">
+				<source>BZD Staff Directory</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.click_enlarge" xml:space="preserve">
+				<source>Click enlarge images?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.contactbox" xml:space="preserve">
+				<source>Contact person (Box)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.css_file" xml:space="preserve">
+				<source>CSS-File</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.detailPage" xml:space="preserve">
+				<source>Detailpage (where to show the detailed info of the persons?)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.detailview" xml:space="preserve">
+				<source>Detailview</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.disableBackLink" xml:space="preserve">
+				<source>Disable back links?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.doNotLinkToDetailView" xml:space="preserve">
+				<source>Do not link to details page.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.emailasimage" xml:space="preserve">
+				<source>Show email-address as an image?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.ignoreGroupSelection" xml:space="preserve">
+				<source>Ignore Group selection (show every person)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.ignoreTeamLeaders" xml:space="preserve">
+				<source>Ignore the team leaders (hide in list)?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.linkNamesToSingleView" xml:space="preserve">
+				<source>Make names be linked to the single view?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.listtype" xml:space="preserve">
+				<source>List to show</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.settings" xml:space="preserve">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showAgeInsteadOfBirthdate" xml:space="preserve">
+				<source>Show the age instead of the birthdate?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showSingleViewAsPopUp" xml:space="preserve">
+				<source>Show the single view in a pop-up?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showimages" xml:space="preserve">
+				<source>Show images?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sortOrder" xml:space="preserve">
+				<source>Sort by</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sortOrderDirection" xml:space="preserve">
+				<source>Sorting direction</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sortOrderDirection_asc" xml:space="preserve">
+				<source>ascending</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sortOrderDirection_desc" xml:space="preserve">
+				<source>descending</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sortOrderForLeaders" xml:space="preserve">
+				<source>Sort order for the team leaders (a field name)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.source_fromplugin" xml:space="preserve">
+				<source>Which persons should be shown:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.source_fromteamleaders" xml:space="preserve">
+				<source>Show the leaders of which team?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.startingpoint" xml:space="preserve">
+				<source>Startingpoint</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.teamlist" xml:space="preserve">
+				<source>Teamlist</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.template" xml:space="preserve">
+				<source>Template</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.template_file" xml:space="preserve">
+				<source>Template-File</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.usergroup" xml:space="preserve">
+				<source>User Group (Team) to show</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_functions" xml:space="preserve">
+				<source>Functions</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_functions.title" xml:space="preserve">
+				<source>Function / Job Description</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_groups" xml:space="preserve">
+				<source>Workgroups</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_groups.group_leaders" xml:space="preserve">
+				<source>Group Leaders</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_groups.group_members" xml:space="preserve">
+				<source>Group Members</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_groups.group_name" xml:space="preserve">
+				<source>Group Name</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_groups.infopage" xml:space="preserve">
+				<source>Page with information about this team</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_locations" xml:space="preserve">
+				<source>Locations</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_locations.address" xml:space="preserve">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_locations.city" xml:space="preserve">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_locations.country" xml:space="preserve">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_locations.infopage" xml:space="preserve">
+				<source>Page with information about this location</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_locations.title" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_locations.zip" xml:space="preserve">
+				<source>ZIP</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons" xml:space="preserve">
+				<source>Persons</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.date_birthdate" xml:space="preserve">
+				<source>Birthdate</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.date_incompany" xml:space="preserve">
+				<source>In company since</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.email" xml:space="preserve">
+				<source>Email Address</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.files" xml:space="preserve">
+				<source>File(s)</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.first_name" xml:space="preserve">
+				<source>First name</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.function" xml:space="preserve">
+				<source>Function / Job Description</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.functions" xml:space="preserve">
+				<source>Function(s)</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.gender" xml:space="preserve">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.gender.female" xml:space="preserve">
+				<source>female</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.gender.male" xml:space="preserve">
+				<source>male</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.gender.notSet" xml:space="preserve">
+				<source>not defined</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.last_name" xml:space="preserve">
+				<source>Last name</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.location" xml:space="preserve">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.mobile_phone" xml:space="preserve">
+				<source>Mobile Phone Number</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.nickname" xml:space="preserve">
+				<source>Nickname</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.officehours" xml:space="preserve">
+				<source>Office hours</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.opinion" xml:space="preserve">
+				<source>Your Opinion</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.phone" xml:space="preserve">
+				<source>Phone Number</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.room" xml:space="preserve">
+				<source>Room Number</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.sorting" xml:space="preserve">
+				<source>Sorting</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.tasks" xml:space="preserve">
+				<source>User Tasks</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.title" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.universal_field_1" xml:space="preserve">
+				<source>Universal field 1</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.universal_field_2" xml:space="preserve">
+				<source>Universal field 2</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.universal_field_3" xml:space="preserve">
+				<source>Universal field 3</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.universal_field_4" xml:space="preserve">
+				<source>Universal field 4</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.universal_field_5" xml:space="preserve">
+				<source>Universal field 5</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.usergroups" xml:space="preserve">
+				<source>Group membership</source>
+			</trans-unit>
+			<trans-unit id="tx_bzdstaffdirectory_persons.xing_profile_url" xml:space="preserve">
+				<source>Link to XING profile</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
