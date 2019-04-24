@@ -962,10 +962,10 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 			$imageconf['JSwindow'] = 1;
 			$imageconf['wrap'] = '<a href="javascript: close();"> | </a>';
 
-			$result = $this->cObj->imageLinkWrap($this->cObj->IMAGE($lconf['image.']),$popUpImageArray[3],$imageconf);
+			$result = $this->cObj->imageLinkWrap($this->cObj->cObjGetSingle('IMAGE',$lconf),$popUpImageArray[3],$imageconf);
 
 		} else	{
-			$result = $this->cObj->IMAGE($lconf['image.']);
+			$result = $this->cObj->cObjGetSingle('IMAGE', $lconf);
 		}
 
 		return $result;
@@ -1577,7 +1577,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$emailconf["image."]["file."]["10."]["nicetext"] = 1;
 		$emailconf["image."]["file."]["XY"] ='[10.w]+1, [10.h]+4';
 
-		$result['display'] = $this->cObj->IMAGE($emailconf['image.']);
+		$result['display'] = $this->cObj->cObjGetSingle('IMAGE',$emailconf);
 		if ($includeEncryptedLink) {
 			$encrypted = $this->email_jsencrypted($email);
 			$result['begin'] = $encrypted['begin'];

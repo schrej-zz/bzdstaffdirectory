@@ -339,10 +339,10 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 			$imageconf['JSwindow'] = 1;
 			$imageconf['wrap'] = '<a href="javascript: close();"> | </a>';
 
-			$result = $this->cObj->imageLinkWrap($this->cObj->IMAGE($lconf['image.']),$popUpImageArray[3],$imageconf);
+			$result = $this->cObj->imageLinkWrap($this->cObj->cObjGetSingle('IMAGE',$popUpImageArray[3],$imageconf));
 
 		} else	{
-			$result = $this->cObj->IMAGE($lconf['image.']);
+			$result = $this->cObj->cObjGetSingle('IMAGE',['image.']);
 		}
 
 		return $result;
