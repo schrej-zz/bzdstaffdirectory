@@ -13,9 +13,6 @@ $l10n_mode = ($confArr['l10n_mode_prefixLangTitle']?'prefixLangTitle':'');
 // l10n_mode for text fields that probably won't be translated (like the name, phone number and so on)
 $l10n_mode_merge = '';//($confArr['l10n_mode_prefixLangTitle']?'mergeIfNotBlank':'');
 
-// l10n_mode for the image field
-$l10n_mode_image = ($confArr['l10n_mode_imageExclude']?'exclude':'mergeIfNotBlank');
-
 // hide new localizations
 $hideNewLocalizations = ($confArr['hideNewLocalizations']?'mergeIfNotBlank':'');
 
@@ -49,7 +46,6 @@ return Array (
 		'hidden' => array(
 			'l10n_mode' => $hideNewLocalizations,
 			'exclude' => 1,
-//			'label' => 'LLL:EXT:lang/locallang_general.php:LGL.hidden',
             'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
 			'config' => array(
 				'type' => 'check',
@@ -84,7 +80,6 @@ return Array (
 			)
 		),
 		'image' => array(
-			'l10n_mode' => $l10n_mode_image,
 			'exclude' => 1,
 			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.image',
 			'config' => array(
@@ -96,6 +91,9 @@ return Array (
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1
+				'behaviour' => [
+	                'allowLanguageSynchronization' => true
+				]
 			)
 		),
 		'usergroups' => array(
