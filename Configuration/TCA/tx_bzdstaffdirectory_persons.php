@@ -90,10 +90,10 @@ return Array (
 				'uploadfolder' => 'uploads/tx_bzdstaffdirectory',
 				'size' => 1,
 				'minitems' => 0,
-				'maxitems' => 1
+				'maxitems' => 1,
 				'behaviour' => [
 	                'allowLanguageSynchronization' => true
-				]
+				],
 			)
 		),
 		'usergroups' => array(
