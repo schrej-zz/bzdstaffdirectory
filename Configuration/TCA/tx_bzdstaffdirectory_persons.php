@@ -70,10 +70,81 @@ return Array (
 				'size' => '30',
 			)
 		),
+		'nickname' => array(
+			'l10n_mode' => $l10n_mode_merge,
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.nickname',
+			'config' => array(
+				'type' => 'input',
+				'size' => '30'
+			)
+		),
+		'gender' => array(
+			'l10n_mode' => $l10n_mode_merge,
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.gender',
+			'config' => array(
+				'type' => 'select',
+                		'renderType' => 'selectSingle',
+				'items' => array(
+					array('LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.gender.notSet', 0),
+					array('LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.gender.male', 1),
+					array('LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.gender.female', 2)
+				)
+			)
+		),
 		'title' => array(
 			'l10n_mode' => $l10n_mode,
 			'exclude' => 1,
 			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.title',
+			'config' => array(
+				'type' => 'input',
+				'size' => '30'
+			)
+		),
+		'email' => array(
+			'l10n_mode' => $l10n_mode_merge,
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.email',
+			'config' => array(
+				'type' => 'input',
+				'size' => '30',
+			)
+		),
+		'phone' => array(
+			'l10n_mode' => $l10n_mode_merge,
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.phone',
+			'config' => array(
+				'type' => 'input',
+				'size' => '30'
+			)
+		),
+		'mobile_phone' => array(
+			'l10n_mode' => $l10n_mode_merge,
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.mobile_phone',
+			'config' => array(
+				'type' => 'input',
+				'size' => '30'
+			)
+		),
+		'date_birthdate' => array(
+			'l10n_mode' => $l10n_mode_merge,
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.date_birthdate',
+			'config' => array(
+				'type' => 'input',
+				'size' => '12',
+				'eval' => 'date',
+				'default' => '0',
+				'renderType' => 'inputDateTime'
+			)
+		),
+		'room' => array(
+			'l10n_mode' => $l10n_mode_merge,
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.room',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30'
@@ -111,42 +182,13 @@ return Array (
 				'MM' => 'tx_bzdstaffdirectory_persons_usergroups_mm',
 			)
 		),
-		'gender' => array(
-			'l10n_mode' => $l10n_mode_merge,
+		'universal_field_3' => array(
+			'l10n_mode' => $l10n_mode,
 			'exclude' => 1,
-			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.gender',
-			'config' => array(
-				'type' => 'select',
-                		'renderType' => 'selectSingle',
-				'items' => array(
-					array('LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.gender.notSet', 0),
-					array('LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.gender.male', 1),
-					array('LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.gender.female', 2)
-				)
-			)
-		),
-		'date_incompany' => array(
-			'l10n_mode' => $l10n_mode_merge,
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.date_incompany',
+			'label' => $confArr['fieldNameUniversalField_3'],
 			'config' => array(
 				'type' => 'input',
-				'size' => '12',
-				'eval' => 'date',
-				'default' => '0',
-				'renderType' => 'inputDateTime'
-			)
-		),
-		'date_birthdate' => array(
-			'l10n_mode' => $l10n_mode_merge,
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.date_birthdate',
-			'config' => array(
-				'type' => 'input',
-				'size' => '12',
-				'eval' => 'date',
-				'default' => '0',
-				'renderType' => 'inputDateTime'
+				'size' => '30'
 			)
 		),
 		'function' => array(
@@ -173,13 +215,16 @@ return Array (
 				'MM' => 'tx_bzdstaffdirectory_persons_functions_mm',
 			)
 		),
-		'email' => array(
+		'date_incompany' => array(
 			'l10n_mode' => $l10n_mode_merge,
 			'exclude' => 1,
-			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.email',
+			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.date_incompany',
 			'config' => array(
 				'type' => 'input',
-				'size' => '30',
+				'size' => '12',
+				'eval' => 'date',
+				'default' => '0',
+				'renderType' => 'inputDateTime'
 			)
 		),
 		'tasks' => array(
@@ -215,42 +260,6 @@ return Array (
 				'minitems' => 0,
 				'maxitems' => 99,
 				'MM' => 'tx_bzdstaffdirectory_persons_locations_mm',
-			)
-		),
-		'room' => array(
-			'l10n_mode' => $l10n_mode_merge,
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.room',
-			'config' => array(
-				'type' => 'input',
-				'size' => '30'
-			)
-		),
-		'nickname' => array(
-			'l10n_mode' => $l10n_mode_merge,
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.nickname',
-			'config' => array(
-				'type' => 'input',
-				'size' => '30'
-			)
-		),
-		'phone' => array(
-			'l10n_mode' => $l10n_mode_merge,
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.phone',
-			'config' => array(
-				'type' => 'input',
-				'size' => '30'
-			)
-		),
-		'mobile_phone' => array(
-			'l10n_mode' => $l10n_mode_merge,
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bzdstaffdirectory/locallang_db.php:tx_bzdstaffdirectory_persons.mobile_phone',
-			'config' => array(
-				'type' => 'input',
-				'size' => '30'
 			)
 		),
 		'officehours' => array(
@@ -299,15 +308,6 @@ return Array (
 			'l10n_mode' => $l10n_mode,
 			'exclude' => 1,
 			'label' => $confArr['fieldNameUniversalField_2'],
-			'config' => array(
-				'type' => 'input',
-				'size' => '30'
-			)
-		),
-		'universal_field_3' => array(
-			'l10n_mode' => $l10n_mode,
-			'exclude' => 1,
-			'label' => $confArr['fieldNameUniversalField_3'],
 			'config' => array(
 				'type' => 'input',
 				'size' => '30'
@@ -368,7 +368,7 @@ return Array (
 		)
 	),
 	'types' => array(
-		'0' => array('showitem' => 'hidden,--palette--;;1,last_name,first_name,title,email,phone,mobile_phone,function,functions,nickname,gender,date_birthdate,date_incompany,image,usergroups,location,room,officehours,xing_profile_url,tasks,opinion,files,universal_field_1,universal_field_2,universal_field_3,universal_field_4,universal_field_5')
+		'0' => array('showitem' => 'hidden,--palette--;;1,last_name,first_name,nickname,gender,title,email,phone,mobile_phone,date_birthdate,room,image,usergroups,universal_field_3,function,functions,date_incompany,location,xing_profile_url,tasks,opinion,files,universal_field_1,universal_field_2,universal_field_4,officehours,universal_field_5')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
