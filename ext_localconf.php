@@ -24,7 +24,7 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 ',43);
 */
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPItoST43(bzdstaffdirectory,'pi1/class.tx_bzdstaffdirectory_pi1.php','_pi1','list_type',1);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPItoST43('bzdstaffdirectory','pi1/class.tx_bzdstaffdirectory_pi1.php','_pi1','list_type',1);
 
 
 $TYPO3_CONF_VARS['FE']['eID_include']['tx_bzdstaffdirectory_vcf'] = 'EXT:bzdstaffdirectory/class.tx_bzdstaffdirectory_eID.php';
