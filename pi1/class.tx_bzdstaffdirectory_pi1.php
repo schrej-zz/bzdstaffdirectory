@@ -65,8 +65,8 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$this->pi_initPIflexForm();
 		$this->getTemplateCode();
 
-		$this->arrConf = unserialize($GLOBALS["TYPO3_CONF_VARS"]["EXT"]["extConf"]['bzdstaffdirectory']);
-
+		$this->arrConf = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('backend');
+//		$this->arrConf = unserialize($GLOBALS["TYPO3_CONF_VARS"]["EXT"]["extConf"]['bzdstaffdirectory']);
 
 		// Define the path to the upload folder
 		$this->uploadFolder = 'uploads/tx_bzdstaffdirectory/';
@@ -77,7 +77,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		// load available syslanguages
 		$this->initLanguages();
 		// sys_language_mode defines what to do if the requested translation is not found
-		$this->sys_language_mode = $this->conf['sys_language_mode']?$this->conf['sys_language_mode'] : $GLOBALS['TSFE']->sys_language_mode;
+		$this->sys_language_mode = $this->conf['sys_language_mode']?$this->conf['sys_language_mode'] : TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_mode;
 
 		// Get Listing-Type from Flexform-Settings
 		$this->code = (string)strtoupper(trim($this->pi_getFFvalue($this->cObj->data['pi_flexform'],'listtype','s_welcome')));
@@ -1782,7 +1782,8 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$lres = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',
 			'sys_language',
-			'1=1' . $this->cObj->enableFields('sys_language'));
+			'1=1' . $this->cObj->PageRepository->enableFields('sys_language');
+//			'1=1' . $this->cObj->enableFields('sys_language'));
 
 
 		$this->langArr = array();
