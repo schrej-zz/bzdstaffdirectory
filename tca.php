@@ -2,7 +2,7 @@
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
 // get extension confArr
-$confArr = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('backend');
+$confArr = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('backend');
 // $confArr = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bzdstaffdirectory']);
 
 // l10n_mode for text fields
