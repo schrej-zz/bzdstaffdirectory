@@ -5,7 +5,7 @@
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages("tx_bzdstaffdirectory_persons");
 
-$confArr = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeInstance(ExtensionConfiguration::class)->get('backend');
+$confArr = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)->get('backend');
 // $confArr = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bzdstaffdirectory']);
 
 // l10n_mode for text fields
