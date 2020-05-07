@@ -67,9 +67,11 @@ abstract class tx_bzdstaffdirectory_pi1_frontEndView extends Tx_Oelib_Templatehe
 	/**
 	 * Frees as much memory that has been used by this object as possible.
 	 */
+/* Destruct not necessary anymore in PHP 7.x and up JS 2019.02.10
 	public function __destruct() {
 		parent::__destruct();
 	}
+*/
 
 	/**
 	 * Renders the view and returns its content.

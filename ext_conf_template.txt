@@ -2,7 +2,7 @@
 l10n_mode_prefixLangTitle = 1
 
 #cat=basic/enable/140; type=boolean; label= Localization mode for images: The image field of a localized record is excluded by default (images are alwas taken from the record in the default language). If you need localized images (f.e. if the images show texts) you can enable the "image" field in translated news by setting "l10n_mode_imageExclude" to 0.
-l10n_mode_imageExclude = 1
+l10n_mode_imageExclude = 0
 
 #cat=basic/enable/150; type=boolean; label= Hide new localizations: Here you choose if new localizations of records should be hidden or not. By default new localizations are visible. If this is not wanted set "hideNewLocalizations" to 1.
 hideNewLocalizations = 0
@@ -14,31 +14,31 @@ prependAtCopy = 1
 requiredFields = first_name,last_name
 
 #cat=basic/enable/200; type=boolean; label=Use the universal field 1?
-useUniversalField_1 = 0
+useUniversalField_1 = 1
 
 #cat=basic/enable/201; type=string; label=Field name for universal field 1 (only in backend)
 fieldNameUniversalField_1 = Universal Field 1
 
 #cat=basic/enable/210; type=boolean; label=Use the universal field 2?
-useUniversalField_2 = 0
+useUniversalField_2 = 1
 
 #cat=basic/enable/211; type=string; label=Field name for universal field 2 (only in backend)
 fieldNameUniversalField_2 = Universal Field 2
 
 #cat=basic/enable/220; type=boolean; label=Use the universal field 3?
-useUniversalField_3 = 0
+useUniversalField_3 = 1
 
 #cat=basic/enable/221; type=string; label=Field name for universal field 3 (only in backend)
 fieldNameUniversalField_3 = Universal Field 3
 
 #cat=basic/enable/230; type=boolean; label=Use the universal field 4?
-useUniversalField_4 = 0
+useUniversalField_4 = 1
 
 #cat=basic/enable/231; type=string; label=Field name for universal field 4 (only in backend)
 fieldNameUniversalField_4 = Universal Field 4
 
 #cat=basic/enable/240; type=boolean; label=Use the universal field 5?
-useUniversalField_5 = 0
+useUniversalField_5 = 1
 
 #cat=basic/enable/241; type=string; label=Field name for universal field 5 (only in backend)
 fieldNameUniversalField_5 = Universal Field 5

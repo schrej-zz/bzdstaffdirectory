@@ -1,0 +1,146 @@
+page {
+	includeCSS {
+		bzdstaffdirectory_pi1 = EXT:bzdstaffdirectory/media/bzd_staff_directory.css
+	}
+}
+
+plugin.tx_bzdstaffdirectory_pi1 {
+	# location of the template file
+	templateFile = EXT:bzdstaffdirectory/media/bzdstaff_template.htm
+
+	# comma-separated list of PIDs from where the records should be fetched
+	startingpoint =
+
+	# the level of recursion for the startingpoint
+	recursive = 1
+
+	# detail page
+	detailPage =
+
+	# the UID of the list view (used to link back from the detail view)
+	backPid =
+
+	# configuration for the box view
+	box {
+		# where to select the person(s) to show (page|plugin|teamleaders)
+		source = page
+
+		# comma-separated list of uids from person records
+		source_plugin =
+
+		# comma-separated list of uids from team records
+		source_teamleaders =
+	}
+
+	# default list style
+	liststyle = mixed
+
+	# whether to show dummy pictures at all
+	showDummyPictures = 1
+
+	# whether to show a dummy picture if no gender is defined
+	showUnisexDummyImage = 1
+
+	# default dummy pictures
+	dummyPictureDefault = EXT:bzdstaffdirectory/media/noimg.jpg
+	dummyPictureMale = EXT:bzdstaffdirectory/media/dummyPictureMale.jpg
+	dummyPictureFemale = EXT:bzdstaffdirectory/media/dummyPictureFemale.jpg
+
+	# whether unlocalized records should be shown or not
+	# By default, the default language version of a record will be shown if no translation is found.
+	# You can set this to "strict" to hide non translated records.
+	# --> read the section about the multilanguage features in the manual of this extension!!
+	sys_language_mode =
+
+	# Date format used to show dates in the frontend
+	dateFormatYMD = %e. %B %Y
+	dateFormatInCompany = %B %Y
+	dateFormatBirthday = %B %Y
+
+	# the default sort order for the teamlist
+	sortOrder = last_name, first_name
+
+	# the default sort order for the team leaders in the teamlist
+	# by default, they are ordered by their last name
+	# you can enter any field name of the person record to sort after
+	sortOrderForLeaders = last_name
+
+	# switch to hide the team leaders in the team list
+	ignoreTeamLeaders = 0
+
+	# whether to disable the "back" link
+	disableBackLink = 0
+
+	# whether names should be linked to the single view
+	linkNamesToSingleView = 0
+
+	# whether to disable the links to the detail view completely
+	doNotLinkToDetailView = 0
+
+	# whether the single view should be shown as a pop-up
+	showSingleViewAsPopUp = 0
+
+	# the configuration for the JavaScript pop-up
+	# for allowed values, see tslib_pibase::pi_openAtagHrefInJSwindow()
+	singleViewPopUpConfig = width=670,height=500,status=0,menubar=0,scrollbars=1,resizable=1
+
+	# whether to show the age or the birthdate of a person
+	showAgeInsteadOfBirthdate = 0
+
+	# comma separated list of file extensions that should be opened in a new window.
+	fileExtensionsToOpenInNewWindow = pdf
+
+	# path to the VCF icon
+	vcfIcon = typo3conf/ext/bzdstaffdirectory/media/icon_vcf.gif
+
+	# company name to show in the vCard download
+	companyNameToShowInVCard =
+
+	# Overwrites the locallang labels for certains labels. This is used for the universal fields,
+	# that can be used for different values.
+	_LOCAL_LANG {
+		default {
+			label_universal_field_1 = Universal field 1
+			label_universal_field_2 = Universal field 2
+			label_universal_field_3 = Universal field 3
+			label_universal_field_4 = Universal field 4
+			label_universal_field_5 = Universal field 5
+		}
+		de {
+			label_universal_field_1 = Universelles Feld 1
+			label_universal_field_2 = Universelles Feld 2
+			label_universal_field_3 = Universelles Feld 3
+			label_universal_field_4 = Universelles Feld 4
+			label_universal_field_5 = Universelles Feld 5
+		}
+	}
+
+
+	TEAMLIST  {
+		image {
+			file.maxW = 105
+			file.maxH = 100
+			file.params =
+		}
+	}
+	DETAIL  {
+		image {
+			file.maxW = 180
+			file.params =
+			popup.maxW = 800
+			popup.maxH =
+			popup.params =
+		}
+		tasks {
+			wrap = <ul>|</ul>
+			split.token.char = 10
+			split.wrap = <li>|</li>
+		}
+	}
+	BOX  {
+		image {
+			file.maxW = 120
+			file.params =
+		}
+	}
+}

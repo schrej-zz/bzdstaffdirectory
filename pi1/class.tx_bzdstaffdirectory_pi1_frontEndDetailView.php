@@ -64,7 +64,7 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 
 		$this->getTemplateCode();
 		$this->setLabels();
-		$this->setCSS();
+		//$this->setCSS();
 
 		// Generates the person object and stores it in $this->person.
 		$this->createPerson($personUid);
@@ -83,6 +83,7 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 	/**
 	 * The destructor.
 	 */
+/* Destruct not necessary anymore in PHP 7.x and up JS 2019.02.10
 	public function __destruct() {
 		if ($this->person) {
 			$this->person->__destruct();
@@ -92,6 +93,7 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 		parent::__destruct();
 
 	}
+*/
 
 	/**
 	 * Creates a person in $this->person.
@@ -339,10 +341,10 @@ class tx_bzdstaffdirectory_pi1_frontEndDetailView extends tx_bzdstaffdirectory_p
 			$imageconf['JSwindow'] = 1;
 			$imageconf['wrap'] = '<a href="javascript: close();"> | </a>';
 
-			$result = $this->cObj->imageLinkWrap($this->cObj->IMAGE($lconf['image.']),$popUpImageArray[3],$imageconf);
+			$result = $this->cObj->LinkWrap($this->cObj->cObjGetSingle('IMAGE',$lconf['image.'],$popUpImageArray[3],$imageconf));
 
 		} else	{
-			$result = $this->cObj->IMAGE($lconf['image.']);
+			$result = $this->cObj->cObjGetSingle('IMAGE',$lconf['image.']);
 		}
 
 		return $result;

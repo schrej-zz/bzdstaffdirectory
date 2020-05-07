@@ -70,6 +70,7 @@ class tx_bzdstaffdirectory_pi1_frontEndVcfView extends tx_bzdstaffdirectory_pi1_
 	/**
 	 * The destructor.
 	 */
+	/* Destruct not necessary anymore in PHP 7.x and up JS 2019.02.10
 	public function __destruct() {
 		if ($this->person) {
 			$this->person->__destruct();
@@ -79,6 +80,8 @@ class tx_bzdstaffdirectory_pi1_frontEndVcfView extends tx_bzdstaffdirectory_pi1_
 		parent::__destruct();
 
 	}
+
+	*/
 
 	/**
 	 * Creates a person in $this->person.
