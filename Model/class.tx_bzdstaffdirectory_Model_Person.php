@@ -136,9 +136,14 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 			$function = $functionMapper->find($relation['uid_foreign']);
 
 			// try to localize if we're not in the default language
+			if (TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid > 0) {
+				$function = $functionMapper->overlayRecord($function, TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid);
+/*
 			if ($GLOBALS['TSFE']->sys_language_uid > 0) {
 				$function = $functionMapper->overlayRecord($function, $GLOBALS['TSFE']->sys_language_uid);
+*/
 			}
+
 		}
 
 		return $function;
@@ -363,8 +368,11 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 				$currentTeam = $teamMapper->find($member['uid_foreign']);
 
 				// try to localize if we're not in the default language
-				if ($GLOBALS['TSFE']->sys_language_uid > 0) {
+				if (TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid > 0) {
+					$currentTeam = $teamMapper->overlayRecord($currentTeam, TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid);
+/*				if ($GLOBALS['TSFE']->sys_language_uid > 0) {
 					$currentTeam = $teamMapper->overlayRecord($currentTeam, $GLOBALS['TSFE']->sys_language_uid);
+*/					
 				}
 
 				$teams->add($currentTeam);
@@ -410,8 +418,12 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 				$currentLocation = $locationMapper->find($relation['uid_foreign']);
 
 				// try to localize if we're not in the default language
+				if (TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid > 0) {
+					$currentLocation = $locationMapper->overlayRecord($currentLocation, TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid);
+/*
 				if ($GLOBALS['TSFE']->sys_language_uid > 0) {
 					$currentLocation = $locationMapper->overlayRecord($currentLocation, $GLOBALS['TSFE']->sys_language_uid);
+*/
 				}
 
 				$locations->add($currentLocation);
