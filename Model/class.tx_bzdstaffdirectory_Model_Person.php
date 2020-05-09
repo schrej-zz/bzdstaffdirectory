@@ -136,8 +136,8 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 			$function = $functionMapper->find($relation['uid_foreign']);
 
 			// try to localize if we're not in the default language
-			if (TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid > 0) {
-				$function = $functionMapper->overlayRecord($function, TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid);
+			if (\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid > 0) {
+				$function = $functionMapper->overlayRecord($function, \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid);
 /*
 			if ($GLOBALS['TSFE']->sys_language_uid > 0) {
 				$function = $functionMapper->overlayRecord($function, $GLOBALS['TSFE']->sys_language_uid);
