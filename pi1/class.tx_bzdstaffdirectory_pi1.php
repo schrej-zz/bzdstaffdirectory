@@ -1783,7 +1783,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$lres = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',
 			'sys_language',
-			'1=1' . $this->cObj->PageRepository->enableFields('sys_language');
+			'1=1' . $this->cObj->PageRepository->enableFields('sys_language'));
 //			'1=1' . $this->cObj->enableFields('sys_language'));
 
 
