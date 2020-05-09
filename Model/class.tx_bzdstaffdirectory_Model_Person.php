@@ -418,8 +418,8 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 				$currentLocation = $locationMapper->find($relation['uid_foreign']);
 
 				// try to localize if we're not in the default language
-				if (TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid > 0) {
-					$currentLocation = $locationMapper->overlayRecord($currentLocation, TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid);
+				if ($languageAspect->getLegacyLanguageMode() > 0) {
+					$currentLocation = $locationMapper->overlayRecord($currentLocation, $languageAspect->getLegacyLanguageMode() );
 /*
 				if ($GLOBALS['TSFE']->sys_language_uid > 0) {
 					$currentLocation = $locationMapper->overlayRecord($currentLocation, $GLOBALS['TSFE']->sys_language_uid);
