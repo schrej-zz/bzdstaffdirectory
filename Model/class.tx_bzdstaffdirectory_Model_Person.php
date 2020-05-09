@@ -368,8 +368,8 @@ class tx_bzdstaffdirectory_Model_Person extends tx_bzdstaffdirectory_Model_Gener
 				$currentTeam = $teamMapper->find($member['uid_foreign']);
 
 				// try to localize if we're not in the default language
-				if (TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid > 0) {
-					$currentTeam = $teamMapper->overlayRecord($currentTeam, TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_uid);
+				if ($languageAspect->getLegacyLanguageMode() > 0) {
+					$currentTeam = $teamMapper->overlayRecord($currentTeam, $languageAspect->getLegacyLanguageMode());
 /*				if ($GLOBALS['TSFE']->sys_language_uid > 0) {
 					$currentTeam = $teamMapper->overlayRecord($currentTeam, $GLOBALS['TSFE']->sys_language_uid);
 */					
