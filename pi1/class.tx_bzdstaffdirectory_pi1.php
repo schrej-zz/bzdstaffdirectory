@@ -31,6 +31,7 @@
  */
 
 // I'm too lazy to change the stuff to make autoloading work
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('bzdstaffdirectory');
 
