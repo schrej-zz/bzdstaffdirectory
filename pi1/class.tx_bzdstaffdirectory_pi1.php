@@ -65,7 +65,7 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		$this->pi_initPIflexForm();
 		$this->getTemplateCode();
 
-		$this->arrConf = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('backend');
+		$this->arrConf = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('bzdstaffdirectory');
 //		$this->arrConf = unserialize($GLOBALS["TYPO3_CONF_VARS"]["EXT"]["extConf"]['bzdstaffdirectory']);
 
 		// Define the path to the upload folder
