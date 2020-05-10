@@ -79,7 +79,8 @@ class tx_bzdstaffdirectory_pi1 extends Tx_Oelib_TemplateHelper {
 		// load available syslanguages
 		$this->initLanguages();
 		// sys_language_mode defines what to do if the requested translation is not found
-		$this->sys_language_mode = $this->conf['sys_language_mode']?$this->conf['sys_language_mode'] : $GLOBALS['TSFE']->sys_language_mode;
+		$this->sys_language_mode = $languageAspect->getLegacyLanguageMode();
+		// $this->sys_language_mode = $this->conf['sys_language_mode']?$this->conf['sys_language_mode'] : $GLOBALS['TSFE']->sys_language_mode;
 		//$this->sys_language_mode = $this->conf['sys_language_mode']?$this->conf['sys_language_mode'] : TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->sys_language_mode;
 
 		// Get Listing-Type from Flexform-Settings
